@@ -1,0 +1,33 @@
+<h3 mat-dialog-title>
+    Detail
+</h3>
+<div mat-dialog-content>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="data.name">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Address</mat-label>
+        <input matInput [(ngModel)]="data.address">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Birthday</mat-label>
+        <input matInput [(ngModel)]="data.birthday">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Status</mat-label>
+        <input matInput [(ngModel)]="data.status">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Gender</mat-label>
+        <input matInput [(ngModel)]="data.gender">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Phone</mat-label>
+        <input matInput [(ngModel)]="data.phone">
+    </mat-form-field>
+</div>
+<div mat-dialog-action align="end">
+<button mat-button mat-dialog-close>Batal</button>
+<button mat-flat-button (click)="saveData()"[disabled]="loading">{{loading ? 'Menyimpan..':'Simpan'}}</button>
+</div>
