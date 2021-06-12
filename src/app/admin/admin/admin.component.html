@@ -1,0 +1,32 @@
+<ng-container>
+    <!--toolbar-->
+    <button mat-icon-button (click)="sidenav.toggle()"></button>
+    <div class="uk-width-expand"></div>
+    <button mat-button routerLink="/admin/dashboard">DASHBOARD</button>
+    <button mat-button routerLink="/admin/employee">BERKAS</button>
+    <button mat-button (click)="logout()">LOGOUT</button>
+    <!--end toolbar-->
+    
+    <mat-sidenav-container class="example-container">
+    
+      <mat-sidenav #sidenav 
+      mode="side" 
+      [position]="'start'" 
+      opened class="sidenav-left"
+      [fixedInViewport]="true" 
+      [fixedTopGap]="65"
+      [fixedBottomGap]="0">
+     </mat-sidenav>
+    <!--sidenav content-->
+    <mat-sidenav-content style="padding: 20px; background-color: #ECEFF1;">
+    <!--halaman-halaman tampil disini-->
+    
+   
+<router-outlet></router-outlet>
+    
+    
+    
+    </mat-sidenav-content>
+    <!--end sidenav content-->
+    </mat-sidenav-container>   
+    </ng-container>
